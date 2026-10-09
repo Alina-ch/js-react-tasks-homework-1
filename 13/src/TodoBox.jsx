@@ -70,7 +70,4 @@ export default class TodoBox extends React.Component {
     );
   }
 }
-
-
-
 // END

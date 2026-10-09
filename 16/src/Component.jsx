@@ -1,6 +1,7 @@
 import React from 'react';
 import Modal from './Modal.jsx';
 
+// BEGIN (write your solution here)
 export default class Component extends React.Component {
   constructor(props) {
     super(props);
@@ -32,3 +33,4 @@ export default class Component extends React.Component {
     );
   }
 }
+//END

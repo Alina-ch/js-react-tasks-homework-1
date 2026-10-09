@@ -42,4 +42,4 @@ export default class Collapse extends React.Component {
 Collapse.defaultProps = {
   opened: true,
 };
-
+//END

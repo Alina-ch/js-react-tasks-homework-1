@@ -1,7 +1,6 @@
 import React from 'react';
 
 // BEGIN (write your solution here)
-
 export default class Item extends React.Component {
   render() {
     const { task, onRemove } = this.props;
@@ -25,5 +24,4 @@ export default class Item extends React.Component {
     );
   }
 }
-
 // END

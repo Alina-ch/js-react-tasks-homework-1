@@ -5,8 +5,7 @@ import Item from './Item.jsx';
 import routes from './routes.js';
 
 // BEGIN (write your solution here)
-
-class TodoBox extends React.Component {
+export default class TodoBox extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -95,7 +94,4 @@ class TodoBox extends React.Component {
     );
   }
 }
-
-export default TodoBox;
-
 // END
