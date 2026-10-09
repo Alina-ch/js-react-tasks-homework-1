@@ -26,7 +26,45 @@ const themes = [
 
 class App extends React.Component {
   // BEGIN (write your solution here)
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentTheme: themes[0],
+    };
+  }
 
+  handleChangeTheme = (themeId) => {
+  this.setState({ currentTheme: themes.find((t) => t.id == themeId) });
+};
+
+
+  render() {
+    const { currentTheme } = this.state;
+
+    const contextValue = {
+      themes,
+      currentTheme,
+      changeTheme: this.handleChangeTheme,
+    };
+
+    return (
+      <ThemeContext.Provider value={contextValue}>
+        <div className="p-3">
+          <div className="mb-3">
+            <ThemeSwitcher />
+          </div>
+          <Tabs defaultActiveKey="login" id="theme-tabs" className="mb-3">
+            <Tab eventKey="login" title="Login">
+              <Home />
+            </Tab>
+            <Tab eventKey="registration" title="Registration">
+              <Profile />
+            </Tab>
+          </Tabs>
+        </div>
+      </ThemeContext.Provider>
+    );
+  }
   // END
 }
 
